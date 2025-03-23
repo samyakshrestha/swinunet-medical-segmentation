@@ -41,11 +41,18 @@ This repository contains an end-to-end deep learning pipeline for semantic segme
 
 The final trained model weights are hosted on Hugging Face:
 
-👉 [Download best_swin_upernet_main.pth](https://huggingface.co/samyakshrestha/swin-medical-segmentation/resolve/main/best_swin_upernet_main.pth?download=true)
+🔗 [Download best_swin_upernet_main.pth](https://huggingface.co/samyakshrestha/swin-medical-segmentation/resolve/main/best_swin_upernet_main.pth?download=true)
 
-To load the model:
+To load the model in PyTorch:
+
+
+```python
 import torch
-model.load_state_dict(torch.load("best_swin_upernet_main.pth", map_location=torch.device("cpu")))
+
+model.load_state_dict(
+    torch.load("best_swin_upernet_main.pth", map_location=torch.device("cpu"))
+)
+```
 
 ## Experimental Enhancements
 
@@ -57,7 +64,7 @@ The following were implemented to increase model robustness and interpretability
 	•	Heatmap visualizations on Swin Transformer outputs.
 	•	Highlights the regions that influence predictions most strongly.
 
- ## Dataset
+## Dataset
 
 - **Source**: [ISIC 2018 Challenge – Task 1: Lesion Boundary Segmentation](https://challenge.isic-archive.com/data/)
 - **Description**: The dataset contains dermoscopic images and corresponding binary masks delineating skin lesions.
@@ -65,7 +72,6 @@ The following were implemented to increase model robustness and interpretability
   - Resized all images and masks to **256×256**
   - Normalized image pixel values to **[0, 1]**
   - Binarized masks (lesion = 1, background = 0)
-  - Performed data augmentation using **Albumentations**
 
 > Due to file size limitations, the dataset is not included in this repository. Please download it directly from the [official ISIC archive](https://challenge.isic-archive.com/data/) and place it appropriately before training.
 
@@ -75,7 +81,7 @@ The following were implemented to increase model robustness and interpretability
 
 If you're interested in running this model as an API, check out the companion repository:
 
-** FastAPI Inference API with Docker**  
+**FastAPI Inference API with Docker**  
 GitHub: [medical-segmentation-api](https://github.com/samyakshrestha/medical-segmentation-api)
 
 This includes:
@@ -88,3 +94,6 @@ This includes:
 - Ensembling with Mask2Former
 - Test-Time Augmentation (TTA)
 - Hausdorff Distance and AUC-ROC as additional evaluation metrics
+
+## Author 
+Samyak Shrestha 
