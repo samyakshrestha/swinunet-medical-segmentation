@@ -57,15 +57,14 @@ model.load_state_dict(
 ## Experimental Enhancements
 
 The following were implemented to increase model robustness and interpretability:
-	•	Monte Carlo Dropout:
-	•	Dropout layers kept active during inference.
-	•	Used to estimate epistemic uncertainty by sampling predictions multiple times.
-	•	Grad-CAM:
-	•	Heatmap visualizations on Swin Transformer outputs.
-	•	Highlights the regions that influence predictions most strongly.
+### Monte Carlo Dropout:
+- Dropout layers kept active during inference.
+- Used to estimate epistemic uncertainty by sampling predictions multiple times.
+### Grad-CAM:
+- Heatmap visualizations on Swin Transformer outputs.
+- Highlights the regions that influence predictions most strongly.
 
 ## Dataset
-
 - **Source**: [ISIC 2018 Challenge – Task 1: Lesion Boundary Segmentation](https://challenge.isic-archive.com/data/)
 - **Description**: The dataset contains dermoscopic images and corresponding binary masks delineating skin lesions.
 - **Preprocessing Steps**:
