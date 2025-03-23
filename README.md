@@ -41,7 +41,7 @@ This repository contains an end-to-end deep learning pipeline for semantic segme
 
 The final trained model weights are hosted on Hugging Face:
 
-🔗 [Download best_swin_upernet_main.pth](https://huggingface.co/samyakshrestha/swin-medical-segmentation/resolve/main/best_swin_upernet_main.pth?download=true)
+[Download best_swin_upernet_main.pth](https://huggingface.co/samyakshrestha/swin-medical-segmentation/resolve/main/best_swin_upernet_main.pth?download=true)
 
 To load the model in PyTorch:
 
