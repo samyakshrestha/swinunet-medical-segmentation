@@ -34,7 +34,6 @@ This repository contains an end-to-end deep learning pipeline for semantic segme
 | `unet_training.ipynb` | Baseline UNet model training for lesion segmentation. |
 | `swin_upernet_baseline.ipynb` | Initial Swin + UPerNet implementation with standard training. |
 | `swin_upernet_main.ipynb` | Final tuned model with Grad-CAM visualization and MC Dropout. |
-| `swin_upernet_main` | Helper module for training and inference. |
 
 ---
 
@@ -58,8 +57,7 @@ The following were implemented to increase model robustness and interpretability
 	•	Heatmap visualizations on Swin Transformer outputs.
 	•	Highlights the regions that influence predictions most strongly.
 
-## Future Extensions (Optional)
-	•	Ensembling with Mask2Former
-	•	Test-Time Augmentation (TTA)
-	•	ONNX / TensorRT model export for optimized deployment
-	•	Hausdorff Distance and AUC-ROC as additional evaluation metrics
+## Future Extensions
+- Ensembling with Mask2Former
+- Test-Time Augmentation (TTA)
+- Hausdorff Distance and AUC-ROC as additional evaluation metrics
